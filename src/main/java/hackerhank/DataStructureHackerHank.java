@@ -24,15 +24,15 @@ public class DataStructureHackerHank {
      * The function accepts INTEGER_ARRAY a as parameter.
      */
 
-    public static List<Integer> reverseArray(List<Integer> a) {
+    public static List<Integer> reverseArray(final List<Integer> a) {
       // Write your code here
-      List<Integer> newList = new ArrayList<>();
- for(int i =0; i < a.size(); i ++){
-     Integer maxIndex = a.size() - i - 1;
-     Integer temp = a.get(maxIndex);
-     newList.add(i, temp);
+      final List<Integer> newList = new ArrayList<>();
+      final int size = a.size();
+ for(int iterador =0; iterador < size; iterador++){
+    final int reverseIndex = size - iterador - 1;
+    final Integer temp = a.get(reverseIndex);
+    newList.add(iterador, temp);
  }
-
       return newList;
     }
 
