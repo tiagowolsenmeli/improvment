@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="DataStructureHackerHankTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2023-11-25T21:14:09" hostname="BR0C02FQ4E4MD6M" time="0.018">
+  <properties/>
+  <testcase name="test()" classname="DataStructureHackerHankTest" time="0.018"/>
+  <system-out><![CDATA[Hello world!
+0
+1
+2
+3
+4
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
