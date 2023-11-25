@@ -26,13 +26,11 @@ public class DataStructureHackerHank {
 
     public static List<Integer> reverseArray(List<Integer> a) {
       // Write your code here
-
       List<Integer> newList = new ArrayList<>();
  for(int i =0; i < a.size(); i ++){
-     Integer maxIndex = a.size() - i -1;
+     Integer maxIndex = a.size() - i - 1;
      Integer temp = a.get(maxIndex);
      newList.add(i, temp);
-     System.out.println(i);
  }
 
       return newList;
