@@ -1,4 +1,4 @@
-package hackerhank;
+package hackerhank.datastructure;
 
 import static java.util.stream.Collectors.joining;
 import static java.util.stream.Collectors.toList;
@@ -13,6 +13,9 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Stream;
 
+/**
+ * https://www.hackerrank.com/challenges/arrays-ds/problem?isFullScreen=true
+ */
 public class DataStructureHackerHank {
 
   public class Result {
@@ -27,11 +30,11 @@ public class DataStructureHackerHank {
     public static List<Integer> reverseArray(final List<Integer> a) {
       // Write your code here
       final List<Integer> newList = new ArrayList<>();
-      final int size = a.size();
- for(int iterador =0; iterador < size; iterador++){
-    final int reverseIndex = size - iterador - 1;
-    final Integer temp = a.get(reverseIndex);
-    newList.add(iterador, temp);
+      final int lastIndex = a.size() -1;
+ for(int iterador = lastIndex ; 0 <= iterador; iterador--){
+    final int atualindex = lastIndex - iterador;
+    final Integer temp = a.get(iterador);
+    newList.add(atualindex, temp);
  }
       return newList;
     }
