@@ -9,3 +9,4 @@
 # Gradle local storage
 .gradle/
 ../.gradle/
+../gradle/
