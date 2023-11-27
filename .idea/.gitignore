@@ -8,3 +8,4 @@
 /dataSources.local.xml
 # Gradle local storage
 .gradle/
+../.gradle/
