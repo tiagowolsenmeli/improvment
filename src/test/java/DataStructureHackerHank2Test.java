@@ -11,11 +11,29 @@ public class DataStructureHackerHank2Test {
   private DataStructureHackerHank2 target ;
 
   @Test
-    public void test() throws IOException {
-        int expected = 30;
-        List<List<Integer>> input = List.of(List.of(1,2,3,4,5), List.of(1,2,3,4,5));
+    public void testFirstArray() throws IOException {
+        int expected = 15;
+        List<List<Integer>> input = List.of(List.of(1,2,3,4,5), List.of(1,2,3,4,5), List.of(1,2,3,4,5));
         Integer result = DataStructureHackerHank2.Result.hourglassSum(input);
 
     Assertions.assertEquals(expected, result);
     }
+
+  @Test
+  public void testInvalidSizeReturnZero() throws IOException {
+    int expected = 30;
+    List<List<Integer>> input = List.of(List.of(1,2,3,4,5), List.of(1,2,3,4,5));
+    Integer result = DataStructureHackerHank2.Result.hourglassSum(input);
+
+    Assertions.assertEquals(expected, result);
+  }
+
+  @Test
+  public void testFirstArrayUpValues() throws IOException {
+    int expected = 10;
+    List<List<Integer>> input = List.of(List.of(1,2,3), List.of(1,2,3), List.of(1,2,3));
+    Integer result = DataStructureHackerHank2.Result.sumHourgrass(input);
+
+    Assertions.assertEquals(expected, result);
+  }
 }

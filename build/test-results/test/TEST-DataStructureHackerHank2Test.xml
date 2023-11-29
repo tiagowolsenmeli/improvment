@@ -1,14 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="DataStructureHackerHank2Test" tests="1" skipped="0" failures="1" errors="0" timestamp="2023-11-29T18:57:40" hostname="BR0C02FQ4E4MD6M" time="0.014">
+<testsuite name="DataStructureHackerHank2Test" tests="3" skipped="0" failures="1" errors="0" timestamp="2023-11-29T19:40:31" hostname="BR0C02FQ4E4MD6M" time="0.024">
   <properties/>
-  <testcase name="test()" classname="DataStructureHackerHank2Test" time="0.014">
-    <failure message="org.opentest4j.AssertionFailedError: expected: &lt;30&gt; but was: &lt;0&gt;" type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError: expected: &lt;30&gt; but was: &lt;0&gt;
+  <testcase name="testFirstArray()" classname="DataStructureHackerHank2Test" time="0.019"/>
+  <testcase name="testInvalidSizeReturnZero()" classname="DataStructureHackerHank2Test" time="0.001"/>
+  <testcase name="testFirstArrayUpValues()" classname="DataStructureHackerHank2Test" time="0.003">
+    <failure message="org.opentest4j.AssertionFailedError: expected: &lt;15&gt; but was: &lt;10&gt;" type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError: expected: &lt;15&gt; but was: &lt;10&gt;
 	at app//org.junit.jupiter.api.AssertionUtils.fail(AssertionUtils.java:55)
 	at app//org.junit.jupiter.api.AssertionUtils.failNotEqual(AssertionUtils.java:62)
 	at app//org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
 	at app//org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
 	at app//org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:534)
-	at app//DataStructureHackerHank2Test.test(DataStructureHackerHank2Test.java:19)
+	at app//DataStructureHackerHank2Test.testFirstArrayUpValues(DataStructureHackerHank2Test.java:37)
 	at java.base@17.0.1/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base@17.0.1/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base@17.0.1/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)

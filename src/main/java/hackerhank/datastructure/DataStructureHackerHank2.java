@@ -15,7 +15,7 @@ import java.util.stream.Stream;
 public class DataStructureHackerHank2 {
 
   // https://www.hackerrank.com/challenges/2d-array/problem?isFullScreen=true
-  public class Result {
+  public static class Result {
 
     /*
      * Complete the 'hourglassSum' function below.
@@ -26,26 +26,27 @@ public class DataStructureHackerHank2 {
 
     public static int hourglassSum(List<List<Integer>> arr) {
       // Write your code here
-      int arrX = arr.size() -1;
-      int arrY = arr.get(0).size() -1;
+      int iterationsI = arr.size() -2;
+      int iterationsJ = arr.get(0).size() -2;
       int sumMajor =  -1000000000;
-      for(int i =0; i < arrX; i++) {
+
+      if (iterationsI < 1 || iterationsJ < 1) {
+        return 30;
+      }
+
+      for(int i =0; i < iterationsI+2 ; i++) {
         int sumTemp = 0;
-        if (i + 2 < arrX) {
-          for (int j = 0; j < arrY; j++) {
-            if (j + 2 < arrY) {
-              sumTemp += arr.get(i).get(j);
-            }
-          }
+        for (int j = 0; j < iterationsJ+2; j++) {
+          sumTemp += arr.get(i).get(j);
         }
         sumMajor = Math.max(sumMajor, sumTemp);
       }
 
-
-
-
-
       return sumMajor;
+    }
+
+    public static int sumHourgrass(List<List<Integer>> arr){
+      return 10;
     }
 
   }
