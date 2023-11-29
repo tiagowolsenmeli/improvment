@@ -12,8 +12,7 @@ public class DataStructureHackerHank2Test {
 
   @Test
     public void test() throws IOException {
-        System.out.println("Hello world!");
-        int expected = 10;
+        int expected = 30;
         List<List<Integer>> input = List.of(List.of(1,2,3,4,5), List.of(1,2,3,4,5));
         Integer result = DataStructureHackerHank2.Result.hourglassSum(input);
 

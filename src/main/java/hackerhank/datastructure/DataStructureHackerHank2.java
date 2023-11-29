@@ -26,10 +26,26 @@ public class DataStructureHackerHank2 {
 
     public static int hourglassSum(List<List<Integer>> arr) {
       // Write your code here
-      int arrY = arr.size();
-      int arrX = arr.get(0).size();
+      int arrX = arr.size() -1;
+      int arrY = arr.get(0).size() -1;
+      int sumMajor =  -1000000000;
+      for(int i =0; i < arrX; i++) {
+        int sumTemp = 0;
+        if (i + 2 < arrX) {
+          for (int j = 0; j < arrY; j++) {
+            if (j + 2 < arrY) {
+              sumTemp += arr.get(i).get(j);
+            }
+          }
+        }
+        sumMajor = Math.max(sumMajor, sumTemp);
+      }
 
-      return 0;
+
+
+
+
+      return sumMajor;
     }
 
   }
