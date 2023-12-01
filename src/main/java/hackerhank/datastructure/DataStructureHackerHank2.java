@@ -24,7 +24,7 @@ public class DataStructureHackerHank2 {
      * The function accepts 2D_INTEGER_ARRAY arr as parameter.
      */
 
-    public static int hourglassSum(List<List<Integer>> arr) {
+    public static int hourglassSum(final List<List<Integer>> arr) {
       // Write your code here
       int iterationsI = arr.size() -2;
       int iterationsJ = arr.get(0).size() -2;
@@ -34,10 +34,15 @@ public class DataStructureHackerHank2 {
         return 30;
       }
 
+      List<List<Integer>> arrTemp = new ArrayList<>();
+      arrTemp.add(List.of(0,0,0));
+      arrTemp.add(List.of(0,0,0));
+      arrTemp.add(List.of(0,0,0));
+
       for(int i =0; i < iterationsI+2 ; i++) {
         int sumTemp = 0;
         for (int j = 0; j < iterationsJ+2; j++) {
-          sumTemp += arr.get(i).get(j);
+
         }
         sumMajor = Math.max(sumMajor, sumTemp);
       }
@@ -46,7 +51,35 @@ public class DataStructureHackerHank2 {
     }
 
     public static int sumHourgrass(List<List<Integer>> arr){
-      return 10;
+      int sum = 0;
+      for(int i =0; i < 3 ; i++) {
+        for (int j = 0; j < 3; j++) {
+          if(i!=1) {
+            sum += arr.get(i).get(j);
+          }else {
+            arr.get(1).get(1);
+            j++;
+          }
+        }
+      }
+      return sum;
+    }
+    public static ArrayList<ArrayList<Integer>> createArrTemp(final List<List<Integer>> arr, int i0, int j0){
+
+        ArrayList<ArrayList<Integer>> arrTemp = new ArrayList<>();
+//        arrTemp.add(List.of(0,0,0));
+//        arrTemp.add(List.of(0,0,0));
+//        arrTemp.add(List.of(0,0,0));
+
+        for (int i = i0; i< i0+2; i++) {
+          ArrayList<Integer> line = new ArrayList<>();
+          for (int j = j0; j< j0+2; j++) {
+            line.add(arrTemp.get(i).get(j));
+          }
+            arrTemp.add(line);
+        }
+
+      return arrTemp;
     }
 
   }
