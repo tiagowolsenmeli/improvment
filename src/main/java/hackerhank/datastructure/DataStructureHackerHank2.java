@@ -26,59 +26,43 @@ public class DataStructureHackerHank2 {
 
     public static int hourglassSum(final List<List<Integer>> arr) {
       // Write your code here
-      int iterationsI = arr.size() -2;
-      int iterationsJ = arr.get(0).size() -2;
-      int sumMajor =  -1000000000;
+      int iMaxIterator = arr.size() -2;
+      int jMaxIterator = arr.get(0).size() -2;
 
-      if (iterationsI < 1 || iterationsJ < 1) {
-        return 30;
-      }
-
-      List<List<Integer>> arrTemp = new ArrayList<>();
-      arrTemp.add(List.of(0,0,0));
-      arrTemp.add(List.of(0,0,0));
-      arrTemp.add(List.of(0,0,0));
-
-      for(int i =0; i < iterationsI+2 ; i++) {
-        int sumTemp = 0;
-        for (int j = 0; j < iterationsJ+2; j++) {
-
+      for (int i = 0; i < iMaxIterator; i++) {
+        for (int j = 0; j < jMaxIterator && j < iMaxIterator; j++) {
+          sumHourgrass(createArrTemp(arr, i, j));
         }
-        sumMajor = Math.max(sumMajor, sumTemp);
       }
-
-      return sumMajor;
+      return 0;
     }
 
-    public static int sumHourgrass(List<List<Integer>> arr){
+    public static int sumHourgrass(final List<List<Integer>> arr){
       int sum = 0;
       for(int i =0; i < 3 ; i++) {
         for (int j = 0; j < 3; j++) {
           if(i!=1) {
             sum += arr.get(i).get(j);
           }else {
-            arr.get(1).get(1);
-            j++;
+            if(j==1) {
+              sum += arr.get(1).get(1);
+              j++;
+            }
           }
         }
       }
       return sum;
     }
-    public static ArrayList<ArrayList<Integer>> createArrTemp(final List<List<Integer>> arr, int i0, int j0){
+    public static List<List<Integer>> createArrTemp(final List<List<Integer>> arr, final int i0, final int j0){
 
-        ArrayList<ArrayList<Integer>> arrTemp = new ArrayList<>();
-//        arrTemp.add(List.of(0,0,0));
-//        arrTemp.add(List.of(0,0,0));
-//        arrTemp.add(List.of(0,0,0));
-
-        for (int i = i0; i< i0+2; i++) {
-          ArrayList<Integer> line = new ArrayList<>();
-          for (int j = j0; j< j0+2; j++) {
-            line.add(arrTemp.get(i).get(j));
+        List<List<Integer>> arrTemp = new ArrayList<>();
+        for (int i = i0; i<= i0+2; i++) {
+          List<Integer> line = new ArrayList<>();
+          for (int j = j0; j<= j0+2; j++) {
+            line.add(arr.get(i).get(j));
           }
             arrTemp.add(line);
         }
-
       return arrTemp;
     }
 
