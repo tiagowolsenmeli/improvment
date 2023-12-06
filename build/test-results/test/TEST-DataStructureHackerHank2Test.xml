@@ -1,12 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="DataStructureHackerHank2Test" tests="6" skipped="0" failures="0" errors="0" timestamp="2023-12-05T23:02:03" hostname="BR0C02FQ4E4MD6M" time="0.017">
+<testsuite name="DataStructureHackerHank2Test" tests="3" skipped="0" failures="0" errors="0" timestamp="2023-12-06T11:27:27" hostname="DESKTOP-KJ2TEDD" time="0.032">
   <properties/>
-  <testcase name="testFirstArray()" classname="DataStructureHackerHank2Test" time="0.013"/>
-  <testcase name="testInvalidSizeReturnZero()" classname="DataStructureHackerHank2Test" time="0.001"/>
+  <testcase name="testFirstArray()" classname="DataStructureHackerHank2Test" time="0.026"/>
+  <testcase name="arrTempHour()" classname="DataStructureHackerHank2Test" time="0.001"/>
   <testcase name="testFirstArrayUpValues()" classname="DataStructureHackerHank2Test" time="0.001"/>
-  <testcase name="arrTempHourFrom6x6i0j0()" classname="DataStructureHackerHank2Test" time="0.0"/>
-  <testcase name="arrTempHourFrom6x6i2j2()" classname="DataStructureHackerHank2Test" time="0.0"/>
-  <testcase name="arrTempHourFrom3x3()" classname="DataStructureHackerHank2Test" time="0.0"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

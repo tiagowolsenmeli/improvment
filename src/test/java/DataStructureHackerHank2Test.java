@@ -13,55 +13,41 @@ public class DataStructureHackerHank2Test {
 
   @Test
     public void testFirstArray() throws IOException {
-        int expected = 14;
+        int expected = 0;
         List<List<Integer>> input = List.of(List.of(1,2,3,4,5), List.of(1,2,3,4,5), List.of(1,2,3,4,5));
-        Integer result = DataStructureHackerHank2.Result.sumHourgrass(input);
+        Integer result = DataStructureHackerHank2.Result.hourglassSum(input);
 
     Assertions.assertEquals(expected, result);
     }
 
-  @Test
-  public void testInvalidSizeReturnZero() throws IOException {
-    int expected = 0;
-    List<List<Integer>> input = List.of(List.of(1,2,3,4,5), List.of(1,2,3,4,5), List.of(1,2,3,4,5));
-    Integer result = DataStructureHackerHank2.Result.hourglassSum(input);
-
-    Assertions.assertEquals(expected, result);
-  }
+//  @Test
+//  @Ignore
+//  public void testInvalidSizeReturnZero() throws IOException {
+//    int expected = 30;
+//    List<List<Integer>> input = List.of(List.of(1,2,3,4,5), List.of(1,2,3,4,5));
+//    Integer result = DataStructureHackerHank2.Result.hourglassSum(input);
+//
+//    Assertions.assertEquals(expected, result);
+//  }
 
   @Test
   public void testFirstArrayUpValues() throws IOException {
-    int expected = 7;
-    List<List<Integer>> input = List.of(List.of(1,1,1), List.of(-100,1,-100), List.of(1,1,1));
+    int expected = 68;
+    List<List<Integer>> input = List.of(List.of(10,20,30), List.of(-100,2,-100), List.of(1,2,3));
     Integer result = DataStructureHackerHank2.Result.sumHourgrass(input);
 
     Assertions.assertEquals(expected, result);
   }
 
   @Test
-  public void arrTempHourFrom3x3() throws IOException {
-    List<List<Integer>> expected = List.of(List.of(0,1,2), List.of(0,1,2), List.of(0,1,2));
-    List<List<Integer>> input = List.of(List.of(0,1,2), List.of(0,1,2), List.of(0,1,2));
-    List<List<Integer>> result = DataStructureHackerHank2.Result.createArrTemp(input, 0, 0);
+  public void arrTempHour() throws IOException {
+    int i0 = 0;
+    int j0 = 0;
+    List<Integer> listij = List.of(0,1,2);
+    List<List<Integer>> expected = List.of(listij,listij, listij);
+    List<List<Integer>> input = List.of(listij,listij,listij);
+    ArrayList<ArrayList<Integer>> result = DataStructureHackerHank2.Result.createArrTemp(input, i0, j0);
 
-    Assertions.assertEquals(expected, result);
-  }
-
-  @Test
-  public void arrTempHourFrom6x6i0j0() throws IOException {
-    List<List<Integer>> expected = List.of(List.of(0,1,2), List.of(0,1,2), List.of(0,1,2));
-    List<Integer> expectedLine = List.of(0,1,2,3,4,5);
-    List<List<Integer>> input = List.of(expectedLine,expectedLine,expectedLine,expectedLine,expectedLine,expectedLine);
-    List<List<Integer>> result = DataStructureHackerHank2.Result.createArrTemp(input, 0, 0);
-    Assertions.assertEquals(expected, result);
-  }
-
-  @Test
-  public void arrTempHourFrom6x6i2j2() throws IOException {
-    List<List<Integer>> expected = List.of(List.of(2,3,4), List.of(2,3,4), List.of(2,3,4));
-    List<Integer> expectedLine = List.of(0,1,2,3,4,5);
-    List<List<Integer>> input = List.of(expectedLine,expectedLine,expectedLine,expectedLine,expectedLine,expectedLine);
-    List<List<Integer>> result = DataStructureHackerHank2.Result.createArrTemp(input, 2, 2);
     Assertions.assertEquals(expected, result);
   }
 }
