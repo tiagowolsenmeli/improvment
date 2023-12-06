@@ -21,16 +21,6 @@ public class DataStructureHackerHank2Test {
     Assertions.assertEquals(expected, result);
     }
 
-//  @Test
-//  @Ignore
-//  public void testInvalidSizeReturnZero() throws IOException {
-//    int expected = 30;
-//    List<List<Integer>> input = List.of(List.of(1,2,3,4,5), List.of(1,2,3,4,5));
-//    Integer result = DataStructureHackerHank2.Result.hourglassSum(input);
-//
-//    Assertions.assertEquals(expected, result);
-//  }
-
   @Test
   public void testFirstArrayUpValues() throws IOException {
     int expected = 68;
