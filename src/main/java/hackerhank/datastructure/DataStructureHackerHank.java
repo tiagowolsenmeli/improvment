@@ -31,11 +31,11 @@ public class DataStructureHackerHank {
       // Write your code here
       final List<Integer> newList = new ArrayList<>();
       final int lastIndex = a.size() -1;
- for(int iterador = lastIndex ; 0 <= iterador; iterador--){
-    final int atualindex = lastIndex - iterador;
-    final Integer temp = a.get(iterador);
-    newList.add(atualindex, temp);
- }
+     for(int iterador = lastIndex ; 0 <= iterador; iterador--){
+        final int atualindex = lastIndex - iterador;
+        final Integer temp = a.get(iterador);
+        newList.add(atualindex, temp);
+     }
       return newList;
     }
 

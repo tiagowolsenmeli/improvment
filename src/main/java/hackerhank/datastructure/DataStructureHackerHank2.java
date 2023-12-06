@@ -28,12 +28,22 @@ public class DataStructureHackerHank2 {
       // Write your code here
       int iterationsI = arr.size() - 2;
       int iterationsJ = arr.get(0).size() - 2;
-      int sumMajor = -1000000000;
+      Integer maxHourglassSum = -1000000000;
 
-      return 0;
+      for (int i = 0; i < iterationsI; i++) {
+        for (int j = 0; j < iterationsJ; j++) {
+          ArrayList<ArrayList<Integer>> arrTemp = createArrTemp(arr, i, j);
+          Integer actualHorgras = sumHourgrass(arrTemp);
+          if (actualHorgras > maxHourglassSum || actualHorgras == null) {
+            maxHourglassSum = actualHorgras;
+          }
+        }
+      }
+
+      return maxHourglassSum;
     }
 
-    public static Integer sumHourgrass(List<List<Integer>> arr) {
+    public static Integer sumHourgrass(ArrayList<ArrayList<Integer>> arr) {
       Integer sum = null;
 
       for (int i = 0; i < 3; i++) {
