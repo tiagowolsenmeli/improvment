@@ -30,8 +30,6 @@ public class DataStructureHackerHank2 {
       int iterationsJ = arr.get(0).size() - 2;
       int sumMajor = -1000000000;
 
-
-//      sumMajor = sumHourgrass(arrTemp);
       return 0;
     }
 
