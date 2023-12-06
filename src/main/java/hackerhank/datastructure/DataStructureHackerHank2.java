@@ -26,15 +26,15 @@ public class DataStructureHackerHank2 {
 
     public static int hourglassSum(final List<List<Integer>> arr) {
       // Write your code here
-      int iterationsI = arr.size() - 2;
-      int iterationsJ = arr.get(0).size() - 2;
-      Integer maxHourglassSum = -1000000000;
+      int iterationsI = arr.size() - 3;
+      int iterationsJ = arr.get(0).size() - 3;
+      Integer maxHourglassSum = null;
 
-      for (int i = 0; i < iterationsI; i++) {
-        for (int j = 0; j < iterationsJ; j++) {
+      for (int i = 0; i <= iterationsI; i++) {
+        for (int j = 0; j <= iterationsJ; j++) {
           ArrayList<ArrayList<Integer>> arrTemp = createArrTemp(arr, i, j);
           Integer actualHorgras = sumHourgrass(arrTemp);
-          if (actualHorgras > maxHourglassSum || actualHorgras == null) {
+          if (maxHourglassSum == null || actualHorgras > maxHourglassSum) {
             maxHourglassSum = actualHorgras;
           }
         }
