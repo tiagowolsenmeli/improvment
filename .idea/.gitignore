@@ -1,27 +1,84 @@
-# Default ignored files
-/shelf/
-/workspace.xml
-# Editor-based HTTP Client requests
-/httpRequests/
-# Datasource local storage ignored files
-/dataSources/
-/dataSources.local.xml
-# Gradle local storage
-.gradle/
-#build
-.gradle/*
-.gradle/7.4/executionHistory/executionHistory.bin
-.gradle/7.4/executionHistory/executionHistory.lock
-.gradle/7.4/fileHashes/fileHashes.bin
-.gradle/7.4/fileHashes/fileHashes.lock
-.gradle/buildOutputCleanup/buildOutputCleanup.lock
-.idea/.gitignore
-build/reports/tests/test/classes/DataStructureHackerHank2Test.html
-build/reports/tests/test/classes/DataStructureHackerHankTest.html
-build/reports/tests/test/classes/FirstOnTest.html
-build/reports/tests/test/index.html
-build/reports/tests/test/packages/default-package.html
-build/test-results/test/TEST-DataStructureHackerHank2Test.xml
-build/test-results/test/TEST-DataStructureHackerHankTest.xml
-build/test-results/test/TEST-FirstOnTest.xml
-build/test-results/test/binary/results.bin
+##############################
+## Java
+##############################
+.mtj.tmp/
+*.class
+*.jar
+*.war
+*.ear
+*.nar
+hs_err_pid*
+
+##############################
+## Maven
+##############################
+target/
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+pom.xml.bak
+release.properties
+dependency-reduced-pom.xml
+buildNumber.properties
+.mvn/timing.properties
+.mvn/wrapper/maven-wrapper.jar
+
+##############################
+## Gradle
+##############################
+bin/
+build/
+.gradle
+.gradletasknamecache
+gradle-app.setting
+!gradle-wrapper.jar
+
+##############################
+## IntelliJ
+##############################
+out/
+.idea/
+.idea_modules/
+*.iml
+*.ipr
+*.iws
+
+##############################
+## Eclipse
+##############################
+.settings/
+bin/
+tmp/
+.metadata
+.classpath
+.project
+*.tmp
+*.bak
+*.swp
+*~.nib
+local.properties
+.loadpath
+.factorypath
+
+##############################
+## NetBeans
+##############################
+nbproject/private/
+build/
+nbbuild/
+dist/
+nbdist/
+nbactions.xml
+nb-configuration.xml
+
+##############################
+## Visual Studio Code
+##############################
+.vscode/
+.code-workspace
+
+##############################
+## OS X
+##############################
+.DS_Store
