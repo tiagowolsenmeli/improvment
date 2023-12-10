@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="DataStructureHackerHank2Test" tests="3" skipped="0" failures="0" errors="0" timestamp="2023-12-10T20:08:55" hostname="BR0C02FQ4E4MD6M" time="0.015">
-  <properties/>
-  <testcase name="testFirstArray()" classname="DataStructureHackerHank2Test" time="0.012"/>
-  <testcase name="arrTempHour()" classname="DataStructureHackerHank2Test" time="0.0"/>
-  <testcase name="testFirstArrayUpValues()" classname="DataStructureHackerHank2Test" time="0.001"/>
-  <system-out><![CDATA[]]></system-out>
-  <system-err><![CDATA[]]></system-err>
-</testsuite>
