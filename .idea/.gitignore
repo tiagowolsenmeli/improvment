@@ -7,3 +7,22 @@
 /dataSources/
 /dataSources.local.xml
 # Gradle local storage
+.gradle/
+#build
+.gradle/*
+
+.gradle/7.4/executionHistory/executionHistory.bin
+.gradle/7.4/executionHistory/executionHistory.lock
+.gradle/7.4/fileHashes/fileHashes.bin
+.gradle/7.4/fileHashes/fileHashes.lock
+.gradle/buildOutputCleanup/buildOutputCleanup.lock
+.idea/.gitignore
+build/reports/tests/test/classes/DataStructureHackerHank2Test.html
+build/reports/tests/test/classes/DataStructureHackerHankTest.html
+build/reports/tests/test/classes/FirstOnTest.html
+build/reports/tests/test/index.html
+build/reports/tests/test/packages/default-package.html
+build/test-results/test/TEST-DataStructureHackerHank2Test.xml
+build/test-results/test/TEST-DataStructureHackerHankTest.xml
+build/test-results/test/TEST-FirstOnTest.xml
+build/test-results/test/binary/results.bin
