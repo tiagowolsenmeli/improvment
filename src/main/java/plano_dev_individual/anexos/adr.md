@@ -1,24 +1,3 @@
-package plano_dev_individual.pip_pdi_p1;
-
-public class Pessoa {
-    private String name;
-    private long cpf;
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public void setCpf(long cpf){
-        this.cpf = cpf;
-    }
-
-    public long getCpf(){
-        return cpf;
-    }
 
     //A equipe de data sec hoje passa o cpf COMPLETO para trafegar em dados que são PII,
     // aumetando a possibilidade de ataques. Por isso eles querem extrair apenas o dígito verificador.
@@ -41,8 +20,3 @@ public class Pessoa {
     // A) 2 Dígitos de retorno
     // B) String
     // C) Segurança, o mínimo de informações possível.
-    public String verifiyDigit (){
-        String stringCpf = String.valueOf(cpf);
-        return stringCpf.substring(stringCpf.length() -2);
-    }
-}
