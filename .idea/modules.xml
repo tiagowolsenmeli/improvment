@@ -5,7 +5,6 @@
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/ContinuousImprovment.iml" filepath="$PROJECT_DIR$/.idea/modules/ContinuousImprovment.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/ContinuousImprovment.main.iml" filepath="$PROJECT_DIR$/.idea/modules/ContinuousImprovment.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/ContinuousImprovment.test.iml" filepath="$PROJECT_DIR$/.idea/modules/ContinuousImprovment.test.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/org.example.ContinuousImprovment.iml" filepath="$PROJECT_DIR$/.idea/modules/org.example.ContinuousImprovment.iml" />
     </modules>
   </component>
 </project>
