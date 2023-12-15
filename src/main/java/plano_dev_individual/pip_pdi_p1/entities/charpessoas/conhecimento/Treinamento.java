@@ -22,13 +22,11 @@ public class Treinamento {
     return arrayList;
     }
 
-    public static ArrayList<String> ordenaCompateTo(final ArrayList<String> listaTreinamentos) {
+    public static ArrayList<String> sortCompareTo(final ArrayList<String> listaTreinamentos) {
 
       final ArrayList<String> arrayList = (ArrayList) listaTreinamentos.clone();
 
       arrayList.sort((String s1, String s2) -> s1.compareToIgnoreCase(s2));
-
-
       return arrayList;
     }
 
