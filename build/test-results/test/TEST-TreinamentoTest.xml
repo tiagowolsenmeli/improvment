@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="TreinamentoTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2023-12-15T17:21:33" hostname="BR0C02FQ4E4MD6M" time="0.055">
+<testsuite name="TreinamentoTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2023-12-15T17:48:43" hostname="BR0C02FQ4E4MD6M" time="0.026">
   <properties/>
-  <testcase name="testOrdenaListaTreinamentosCompareTo2()" classname="TreinamentoTest" time="0.044"/>
-  <testcase name="testOrdenaListaTreinamentos2()" classname="TreinamentoTest" time="0.002"/>
-  <testcase name="testOrdenaListaTreinamentos3()" classname="TreinamentoTest" time="0.002"/>
-  <testcase name="testOrdenaListaTreinamentos()" classname="TreinamentoTest" time="0.004"/>
+  <testcase name="testOrdenaListaTreinamentosCompareTo2()" classname="TreinamentoTest" time="0.021"/>
+  <testcase name="testOrdenaListaTreinamentos2()" classname="TreinamentoTest" time="0.001"/>
+  <testcase name="testOrdenaListaTreinamentos3()" classname="TreinamentoTest" time="0.001"/>
+  <testcase name="testOrdenaListaTreinamentos()" classname="TreinamentoTest" time="0.0"/>
+  <testcase name="testOrdenaListaTreinamentosCompareTo()" classname="TreinamentoTest" time="0.0"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
