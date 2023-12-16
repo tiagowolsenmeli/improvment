@@ -9,12 +9,13 @@ public class PessoaFisica extends Pessoa {
   private long cpf;
   private String rg;
   private String dataNascimento;
-  private Sexualidade sexo;
+  private Sexualidade sexualidade;
 
     @Override
     public long getId() {
       return id;
     }
+
 
     @Override
     public long getExternalId() {
@@ -27,7 +28,22 @@ public class PessoaFisica extends Pessoa {
     }
 
     public String getDadosPessoaisResumidos() {
-      return nome + "/n" + sobrenome + "/n" + cpf + "/n" + rg + "/n" + dataNascimento + "/n" + sexo;
+      return nome + "/n" + sobrenome + "/n" + cpf + "/n" + rg + "/n" + dataNascimento + "/n" + sexualidade.getGenero();
     }
+
+    public String getDigitosVerificadoresCpf() {
+      String cpfString = String.valueOf(cpf);
+      return cpfString.substring(cpfString.length() -2);
+    }
+
+
+  public void setCpf(long cpf) {
+    this.cpf = cpf;
+  }
+
+  public long getCpf() {
+    return cpf;
+  }
+
 
 }

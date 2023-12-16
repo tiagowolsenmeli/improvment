@@ -6,7 +6,8 @@ public abstract class Pessoa {
   public long getId() {
     return id;
   } //Herança
-  public abstract long getExternalId();  //Polimorfismo
-  public abstract String getName(); //Polimorfismo
 
+  public abstract long getExternalId();  //Polimorfismo
+
+  public abstract String getName(); //Polimorfismo
 }
