@@ -6,16 +6,21 @@ public class PessoaFisica extends Pessoa {
   private long id;
   private String nome;
   private String sobrenome;
-  private String cpf;
+  private long cpf;
   private String rg;
   private String dataNascimento;
   private Sexualidade sexualidade;
 
     @Override
-    public String getExternalId() {
-        return cpf;
-        }
+    public long getId() {
+      return id;
+    }
 
+
+    @Override
+    public long getExternalId() {
+      return cpf;
+    }
 
     @Override
     public String getName() {
@@ -27,15 +32,16 @@ public class PessoaFisica extends Pessoa {
     }
 
     public String getDigitosVerificadoresCpf() {
-      return cpf.substring(cpf.length() -2);
+      String cpfString = String.valueOf(cpf);
+      return cpfString.substring(cpfString.length() -2);
     }
 
 
-  public void setCpf(String cpf) {
+  public void setCpf(long cpf) {
     this.cpf = cpf;
   }
 
-  public String getCpf() {
+  public long getCpf() {
     return cpf;
   }
 
