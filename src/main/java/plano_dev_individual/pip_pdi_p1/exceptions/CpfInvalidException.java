@@ -1,6 +1,6 @@
 package plano_dev_individual.pip_pdi_p1.exceptions;
 
-public class CpfInvalidException extends Exception {
+public class CpfInvalidException extends BusinessException {
   public CpfInvalidException(final String message) {
     super(message);
   }

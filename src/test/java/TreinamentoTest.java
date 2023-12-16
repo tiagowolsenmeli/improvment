@@ -1,15 +1,23 @@
 import java.util.ArrayList;
 import java.util.Arrays;
 
+import java.util.List;
 import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.InjectMocks;
 import plano_dev_individual.pip_pdi_p1.entities.charpessoas.conhecimento.Treinamento;
+import plano_dev_individual.pip_pdi_p1.exceptions.BusinessException;
 
 public class TreinamentoTest {
 
     @InjectMocks
     private Treinamento treinamento;
+
+    @BeforeEach
+    public void setUp() {
+        treinamento = new Treinamento();
+    }
 
   @Test
   public void testOrdenaListaTreinamentos() {
@@ -58,7 +66,7 @@ public class TreinamentoTest {
     final ArrayList<String>  expected = new ArrayList<>(Arrays.asList("1234555", "Barbara", "C#", "C++", "Claudio", "Ellen",
         "Java", "Python", "Rodrigo", "Washington", "Zaza", "Ângstron", "Óstia"));
 
-    ArrayList<String> result = Treinamento.sortCompareTo(inputList);
+    ArrayList<String> result = treinamento.sortCompareTo(inputList);
 
     Assertions.assertEquals(expected, result);
   }
@@ -82,6 +90,28 @@ public class TreinamentoTest {
     ArrayList<String> result = treinamento.ordenaListaTreinamentos(inputList);
 
     Assertions.assertEquals(expected, result);
+  }
+
+
+  @Test
+  public void testCreateListOfString() {
+    final String inputList = "Java,C++,Python,C#,A";
+    final ArrayList<String>  expected = new ArrayList<>(Arrays.asList("Java", "C++", "Python", "C#","A"));
+
+    ArrayList<String> result = treinamento.createlist(inputList);
+
+    Assertions.assertEquals(expected, result);
+  }
+
+  @org.junit.Test(expected = BusinessException.class)
+  public void testCreatePalavrasChave() throws BusinessException {
+      final String inputList = "Java,C++,Python,C#,A,Não cabe mais palavras";
+      final ArrayList<String>  expected = new ArrayList<>(Arrays.asList("Java", "C++", "Python", "C#","A"));
+
+         treinamento.setPalavrasChave(inputList);
+         List<String> result =  treinamento.getPalavrasChave();
+
+         Assertions.assertEquals(expected, result);
   }
 
 }
