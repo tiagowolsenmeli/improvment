@@ -13,8 +13,9 @@ public class PessoaFisica extends Pessoa {
 
     @Override
     public String getExternalId() {
-      return cpf;
-    }
+        return cpf;
+        }
+
 
     @Override
     public String getName() {
@@ -37,4 +38,6 @@ public class PessoaFisica extends Pessoa {
   public String getCpf() {
     return cpf;
   }
+
+
 }
