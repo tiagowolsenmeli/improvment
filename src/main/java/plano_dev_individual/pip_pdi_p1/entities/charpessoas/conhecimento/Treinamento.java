@@ -44,6 +44,10 @@ public class Treinamento {
     this.palavrasChave = palavrasChave;
   }
 
+  public void setNomeApresentador(String nomeApresentador) {
+    this.nomeApresentador = nomeApresentador;
+  }
+
   public Treinamento() {
     this.palavrasChave = new ArrayList<>(MAX_PALAVRAS_CHAVE);
   }
