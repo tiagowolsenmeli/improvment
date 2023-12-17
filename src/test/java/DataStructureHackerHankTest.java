@@ -8,7 +8,7 @@ import org.mockito.InjectMocks;
 public class DataStructureHackerHankTest {
 
   @InjectMocks
-  private DataStructureHackerHank dataStructureHackerHank ;
+  private DataStructureHackerHank target;
 
   @Test
     public void test() throws IOException {

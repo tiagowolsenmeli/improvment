@@ -1,30 +1,44 @@
 package entrypoints;
 
+import static org.mockito.ArgumentMatchers.any;
+import static org.mockito.ArgumentMatchers.eq;
+import static org.mockito.Mockito.doReturn;
+import static org.mockito.Mockito.doThrow;
+
 import java.util.List;
 import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import org.junit.runner.RunWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.springframework.http.ResponseEntity;
+import plano_dev_individual.pip_pdi_p1.business.TreinamentosUseCase;
 import plano_dev_individual.pip_pdi_p1.entities.charpessoas.conhecimento.Treinamento;
 import plano_dev_individual.pip_pdi_p1.entrypoints.PdiController;
 
 
-@RunWith(org.mockito.junit.MockitoJUnitRunner.class)
 public class PdiControllerTest {
 
-  @InjectMocks
-  private PdiController pdiController;
-
   @Mock
-  private Treinamento treinamento;
+  private TreinamentosUseCase treinamentosUseCase;
+
+  @InjectMocks
+  private PdiController pdiController ;
+
+  @BeforeEach
+  public void setUp() {
+    this.treinamentosUseCase = new TreinamentosUseCase(new Treinamento());
+    this.pdiController = new PdiController(treinamentosUseCase);
+  }
+
 
   @Test
   public void cadastrarTreinamentoTest(){
-    final Treinamento input = new Treinamento();
-    ResponseEntity<List<String>> result = pdiController.ordenarListaTreinamento(input);
+    final String input = "A,C,B,D";
+    final List<String> expected = List.of("A", "B", "C", "D");
 
-    Assertions.assertEquals(input, result.getBody());
+    ResponseEntity<List<String>> result = pdiController.createListTrainmentAndReturnOrdered(input);
+
+    Assertions.assertEquals(expected, result.getBody());
   }
 }
