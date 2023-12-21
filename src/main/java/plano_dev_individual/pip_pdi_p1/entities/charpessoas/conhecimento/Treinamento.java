@@ -69,10 +69,10 @@ public class Treinamento {
   }
 
 
-  public ArrayList<String> ordenaListaTreinamentos(final ArrayList<String> listaTreinamentos) {
+  public List<String> ordenaListaTreinamentos(final List<String> listaTreinamentos) {
 
 
-    ArrayList<String> arrayList = (ArrayList) listaTreinamentos.clone();
+    List<String> arrayList = new ArrayList<>(listaTreinamentos);
 
     for (int i = 0; i < arrayList.size(); i++) {
       for (int j = 0; j < arrayList.size(); j++) {
@@ -88,16 +88,16 @@ public class Treinamento {
     return arrayList;
   }
 
-  public ArrayList<String> sortCompareTo(final ArrayList<String> listaTreinamentos) {
+  public List<String> sortCompareTo(final List<String> listaTreinamentos) {
 
-    final ArrayList<String> arrayList = (ArrayList) listaTreinamentos.clone();
+    final ArrayList<String> arrayList = new ArrayList<>(listaTreinamentos);
 
     arrayList.sort((String s1, String s2) -> s1.compareToIgnoreCase(s2));
     return arrayList;
   }
 
-  public ArrayList<String> createlist(String lista) {
-    ArrayList<String> listaOfString = new ArrayList<>();
+  public List<String> createlist(String lista) {
+    List<String> listaOfString = new ArrayList<>();
     String[] array = lista.split(",");
     for (int i = 0; i < array.length; i++) {
       listaOfString.add(array[i]);

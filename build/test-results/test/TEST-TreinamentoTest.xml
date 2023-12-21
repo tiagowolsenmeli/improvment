@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="TreinamentoTest" tests="6" skipped="0" failures="0" errors="0" timestamp="2023-12-19T23:18:53" hostname="BR0C02FQ4E4MD6M" time="0.017">
+  <properties/>
+  <testcase name="testOrdenaListaTreinamentosCompareTo2()" classname="TreinamentoTest" time="0.005"/>
+  <testcase name="testCreateListOfString()" classname="TreinamentoTest" time="0.001"/>
+  <testcase name="testOrdenaListaTreinamentos2()" classname="TreinamentoTest" time="0.001"/>
+  <testcase name="testOrdenaListaTreinamentos3()" classname="TreinamentoTest" time="0.002"/>
+  <testcase name="testOrdenaListaTreinamentos()" classname="TreinamentoTest" time="0.002"/>
+  <testcase name="testOrdenaListaTreinamentosCompareTo()" classname="TreinamentoTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

@@ -12,16 +12,11 @@ import org.springframework.web.bind.annotation.RestController;
 import plano_dev_individual.pip_pdi_p1.business.TreinamentosUseCase;
 
 @RestController
-@RequiredArgsConstructor
-@AllArgsConstructor
 public class PdiController {
 
   @Autowired
   private  TreinamentosUseCase treinamentosUseCase;
 
-  public PdiController(TreinamentosUseCase treinamentosUseCase) {
-    this.treinamentosUseCase = treinamentosUseCase;
-  }
 
   @PostMapping(path = "pdi/treinamento",
       consumes = MediaType.APPLICATION_JSON_VALUE,
