@@ -1,12 +1,16 @@
 package plano_dev_individual.pip_pdi_p1.entities.pessoa;
 
+import lombok.Data;
 import plano_dev_individual.pip_pdi_p1.entities.pessoa.sexualidade.Sexualidade;
 
+@Data
 public class PessoaFisica extends Pessoa {
   private long id;
   private String nome;
   private String sobrenome;
   private long cpf;
+
+  private int digitoVerificador;
   private String rg;
   private String dataNascimento;
   private Sexualidade sexualidade;

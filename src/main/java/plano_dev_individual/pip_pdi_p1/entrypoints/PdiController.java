@@ -9,13 +9,18 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
+import plano_dev_individual.pip_pdi_p1.business.CadastrarPessoaUseCase;
 import plano_dev_individual.pip_pdi_p1.business.TreinamentosUseCase;
+import plano_dev_individual.pip_pdi_p1.entities.pessoa.PessoaFisica;
+import plano_dev_individual.pip_pdi_p1.exceptions.BusinessException;
 
 @RestController
 public class PdiController {
 
   @Autowired
   private  TreinamentosUseCase treinamentosUseCase;
+  @Autowired
+  CadastrarPessoaUseCase cadastrarPessoaUseCase;
 
 
   @PostMapping(path = "pdi/treinamento",
@@ -25,5 +30,19 @@ public class PdiController {
     List<String> list = treinamentosUseCase.inputStringAndReturnOrderedList(listaTreinamento);
 
     return ResponseEntity.ok(list);
+  }
+
+  @PostMapping(path = "pdi/cadastro/pessoafisica",
+      consumes = MediaType.APPLICATION_JSON_VALUE,
+      produces = MediaType.APPLICATION_JSON_VALUE)
+  public ResponseEntity<Object> createPessoaFisica(@RequestBody PessoaFisica pessoaFisica) {
+    PessoaFisica returnPessoaCadastrada = new PessoaFisica();
+    try {
+       returnPessoaCadastrada = cadastrarPessoaUseCase.cadastrarPessoaFisica(pessoaFisica);
+      return ResponseEntity.ok(returnPessoaCadastrada);
+    } catch (BusinessException businessException){
+      return ResponseEntity.internalServerError().body(businessException.getMessage());
+    }
+
   }
 }
