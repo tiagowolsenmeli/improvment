@@ -3,6 +3,7 @@ package plano_dev_individual.pip_pdi_p1.entrypoints;
 import java.util.List;
 import lombok.AllArgsConstructor;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
@@ -15,6 +16,7 @@ import plano_dev_individual.pip_pdi_p1.entities.pessoa.PessoaFisica;
 import plano_dev_individual.pip_pdi_p1.exceptions.BusinessException;
 
 @RestController
+@Slf4j
 public class PdiController {
 
   @Autowired
@@ -41,7 +43,10 @@ public class PdiController {
        returnPessoaCadastrada = cadastrarPessoaUseCase.cadastrarPessoaFisica(pessoaFisica);
       return ResponseEntity.ok(returnPessoaCadastrada);
     } catch (BusinessException businessException){
+      log.error("Erro ao realizar solicitação de pessoa física");
       return ResponseEntity.internalServerError().body(businessException.getMessage());
+    } finally {
+        log.info("Solcitação de pessoa física realizado com sucesso");
     }
 
   }
