@@ -36,7 +36,7 @@ public class PdiController {
       consumes = MediaType.APPLICATION_JSON_VALUE,
       produces = MediaType.APPLICATION_JSON_VALUE)
   public ResponseEntity<Object> createPessoaFisica(@RequestBody PessoaFisica pessoaFisica) {
-    PessoaFisica returnPessoaCadastrada = new PessoaFisica();
+    PessoaFisica returnPessoaCadastrada;
     try {
        returnPessoaCadastrada = cadastrarPessoaUseCase.cadastrarPessoaFisica(pessoaFisica);
       return ResponseEntity.ok(returnPessoaCadastrada);
