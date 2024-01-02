@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="usecase.TreinamentosUseCaseTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2023-12-19T23:18:52" hostname="BR0C02FQ4E4MD6M" time="1.509">
+<testsuite name="usecase.TreinamentosUseCaseTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2024-01-02T19:44:45" hostname="BR0C02FQ4E4MD6M" time="0.032">
   <properties/>
-  <testcase name="testTreinamentoUseCase()" classname="usecase.TreinamentosUseCaseTest" time="1.509"/>
+  <testcase name="testTreinamentoUseCase()" classname="usecase.TreinamentosUseCaseTest" time="0.032"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
