@@ -1,11 +1,24 @@
 package plano_dev_individual.pip_pdi_p1.exceptions;
 
+
+import java.util.List;
+import java.util.Set;
+
 public class CpfInvalidException extends BusinessException {
-  public CpfInvalidException(final String message) {
-    super(message);
+  private final static int ERROR_CODE = 10;
+  private final static String BUSINESS_MESSAGE = "CPF inválido";
+  private final static String MESSAGE = "CPF não confere com o dígito verificador";
+  private String cpf;
+
+
+  public CpfInvalidException(final String cpf) {
+    super(MESSAGE, ERROR_CODE, BUSINESS_MESSAGE);
+    this.cpf = cpf;
   }
 
-  public CpfInvalidException(final String message, final Throwable cause) {
-    super(message, cause);
-  }
+    public String getCpf() {
+      return cpf;
+    }
+    Set<String> set;
+
 }

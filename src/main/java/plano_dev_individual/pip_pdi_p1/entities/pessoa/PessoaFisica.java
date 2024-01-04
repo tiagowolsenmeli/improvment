@@ -8,7 +8,7 @@ public class PessoaFisica extends Pessoa {
   private long id;
   private String nome;
   private String sobrenome;
-  private long cpf;
+  private String cpf;
 
   private int digitoVerificador;
   private String rg;
@@ -23,7 +23,7 @@ public class PessoaFisica extends Pessoa {
 
     @Override
     public long getExternalId() {
-      return cpf;
+      return Long.parseLong(cpf);
     }
 
     @Override
@@ -41,11 +41,11 @@ public class PessoaFisica extends Pessoa {
     }
 
 
-  public void setCpf(long cpf) {
+  public void setCpf(String cpf) {
     this.cpf = cpf;
   }
 
-  public long getCpf() {
+  public String getCpf() {
     return cpf;
   }
 
