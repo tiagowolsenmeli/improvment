@@ -1,7 +1,6 @@
 package plano_dev_individual.pip_pdi_p1.exceptions;
 
 
-import java.util.List;
 import java.util.Set;
 
 public class CpfInvalidException extends BusinessException {

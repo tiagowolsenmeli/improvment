@@ -1,27 +1,11 @@
 package plano_dev_individual.pip_pdi_p1.entities;
 
-public class Funcionario {
-    private String name;
-    private long cpf;
+import plano_dev_individual.pip_pdi_p1.entities.cargos.Cargo;
+import plano_dev_individual.pip_pdi_p1.entities.pessoa.PessoaFisica;
 
-    public String getName() {
-        return name;
-    }
+public class Funcionario extends PessoaFisica {
 
-    public void setName(String name) {
-        this.name = name;
-    }
+    private Cargo cargo;
+    private String matricula;
 
-    public void setCpf(long cpf){
-        this.cpf = cpf;
-    }
-
-    public long getCpf(){
-        return cpf;
-    }
-
-    public String verifiyDigit (){
-        String stringCpf = String.valueOf(cpf);
-        return stringCpf.substring(stringCpf.length() -2);
-    }
 }
