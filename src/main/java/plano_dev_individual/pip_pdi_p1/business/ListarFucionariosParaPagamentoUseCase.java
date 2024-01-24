@@ -2,6 +2,7 @@ package plano_dev_individual.pip_pdi_p1.business;
 
 import java.util.Set;
 import lombok.Data;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import plano_dev_individual.pip_pdi_p1.entities.Funcionario;
 import plano_dev_individual.pip_pdi_p1.repositories.EmpregadoRelacionalBD;
@@ -9,6 +10,8 @@ import plano_dev_individual.pip_pdi_p1.repositories.EmpregadoRelacionalBD;
 @Data
 @Service
 public class ListarFucionariosParaPagamentoUseCase {
+
+  @Autowired
   private EmpregadoRelacionalBD empregadoRelacionalBD;
 
     public Set<Funcionario> listarFuncionariosParaPagamento(){
