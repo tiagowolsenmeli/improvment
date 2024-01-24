@@ -1,6 +1,8 @@
 import hackerhank.datastructure.DataStructureHackerHank;
 import java.io.IOException;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.mockito.InjectMocks;
@@ -8,7 +10,7 @@ import org.mockito.InjectMocks;
 public class DataStructureHackerHankTest {
 
   @InjectMocks
-  private DataStructureHackerHank dataStructureHackerHank ;
+  private DataStructureHackerHank target;
 
   @Test
     public void test() throws IOException {
