@@ -1,5 +1,6 @@
 package entrypoints;
 
+import static org.mockito.Mockito.doReturn;
 import static org.mockito.Mockito.when;
 
 import java.util.List;
@@ -10,6 +11,7 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
+import org.mockito.Spy;
 import org.springframework.http.ResponseEntity;
 import plano_dev_individual.pip_pdi_p1.business.TreinamentosUseCase;
 import plano_dev_individual.pip_pdi_p1.entrypoints.PdiController;
