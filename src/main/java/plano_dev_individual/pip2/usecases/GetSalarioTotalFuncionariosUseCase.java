@@ -1,4 +1,4 @@
-package plano_dev_individual.pip_pdi_p1.business;
+package plano_dev_individual.pip2.usecases;
 
 import java.math.BigDecimal;
 import java.util.HashSet;
@@ -6,11 +6,12 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 import java.util.function.Predicate;
-import plano_dev_individual.pip_pdi_p1.entities.Funcionario;
-import plano_dev_individual.pip_pdi_p1.enums.CargoBase;
+import plano_dev_individual.pip2.entities.Funcionario;
+import plano_dev_individual.pip2.entities.enums.CargoBase;
 
 
-public class GetSalarioTotalOfListFuncionariosUseCase {
+public class GetSalarioTotalFuncionariosUseCase {
+
 
   //TODO Código tem que ser mais poético e semântico
   public BigDecimal execute(List<Funcionario> funcionarioList) {
@@ -33,4 +34,5 @@ public class GetSalarioTotalOfListFuncionariosUseCase {
         .map(Funcionario::getSalarioBruto)
         .reduce(BigDecimal.ZERO, BigDecimal::add);
   }
+
 }
