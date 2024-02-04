@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="usecase.ListarSalariosPerCargoUseCase" tests="1" skipped="0" failures="0" errors="0" timestamp="2024-02-04T16:38:59" hostname="BR0C02FQ4E4MD6M" time="0.735">
+  <properties/>
+  <testcase name="getFuncinariosAptosParaSalario()" classname="usecase.ListarSalariosPerCargoUseCase" time="0.735"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

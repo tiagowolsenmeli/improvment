@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="TreinamentoTest" tests="6" skipped="0" failures="0" errors="0" timestamp="2024-01-02T22:43:40" hostname="BR0C02FQ4E4MD6M" time="0.029">
+<testsuite name="TreinamentoTest" tests="6" skipped="0" failures="0" errors="0" timestamp="2024-02-04T16:39:00" hostname="BR0C02FQ4E4MD6M" time="0.007">
   <properties/>
-  <testcase name="testOrdenaListaTreinamentosCompareTo2()" classname="TreinamentoTest" time="0.006"/>
-  <testcase name="testCreateListOfString()" classname="TreinamentoTest" time="0.002"/>
-  <testcase name="testOrdenaListaTreinamentos2()" classname="TreinamentoTest" time="0.002"/>
-  <testcase name="testOrdenaListaTreinamentos3()" classname="TreinamentoTest" time="0.003"/>
-  <testcase name="testOrdenaListaTreinamentos()" classname="TreinamentoTest" time="0.002"/>
-  <testcase name="testOrdenaListaTreinamentosCompareTo()" classname="TreinamentoTest" time="0.003"/>
+  <testcase name="testOrdenaListaTreinamentosCompareTo2()" classname="TreinamentoTest" time="0.002"/>
+  <testcase name="testCreateListOfString()" classname="TreinamentoTest" time="0.001"/>
+  <testcase name="testOrdenaListaTreinamentos2()" classname="TreinamentoTest" time="0.001"/>
+  <testcase name="testOrdenaListaTreinamentos3()" classname="TreinamentoTest" time="0.001"/>
+  <testcase name="testOrdenaListaTreinamentos()" classname="TreinamentoTest" time="0.001"/>
+  <testcase name="testOrdenaListaTreinamentosCompareTo()" classname="TreinamentoTest" time="0.0"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
