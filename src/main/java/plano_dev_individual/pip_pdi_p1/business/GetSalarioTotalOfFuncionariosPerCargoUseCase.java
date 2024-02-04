@@ -16,7 +16,7 @@ public class GetSalarioTotalOfFuncionariosPerCargoUseCase {
     Set<Funcionario> funcionariosUnicos = new HashSet<>(funcionarioList);
 
     List<Funcionario> funcionariosList = funcionariosUnicos.stream()
-        .filter(funcionario -> funcionario.getCargo().getCargoBase().equals(cargoBase.name()))
+        .filter(funcionario -> funcionario.getCargo().getCargoBase().equals(cargoBase))
         .toList();
 
     return getSalarioTotalOfListFuncionariosUseCase.execute(funcionariosList);

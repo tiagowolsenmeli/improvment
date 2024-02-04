@@ -30,8 +30,9 @@ public class ListarSalariosPerCargoUseCase {
   @Test
   public void getFuncinariosAptosParaSalario(){
     //given
-    BigDecimal expected = BigDecimal.valueOf(3200.00);
-    List<Funcionario> funcionarioList = new ArrayList<>();
+    BigDecimal expected = BigDecimal.valueOf(1100.00);
+    List<Funcionario> inputFuncionariosList = new ArrayList<>();
+    List<Funcionario> mockList = new ArrayList<>();
 
     Cargo cargo = new Cargo();
     cargo.setCargoBase(CargoBase.DEV_JUNIOR);
@@ -41,23 +42,28 @@ public class ListarSalariosPerCargoUseCase {
     funcionario1.setAdicionalPersonalizado(BigDecimal.valueOf(100.00));
 
     Funcionario funcionario2 = new Funcionario();
+    Cargo cargoDevPleno = new Cargo();
+    cargoDevPleno.setCargoBase(CargoBase.DEV_PLENO);
+    funcionario2.setCargo(cargoDevPleno);
     funcionario2.setSalario(BigDecimal.valueOf(2000.00));
     funcionario2.setAdicionalPersonalizado(BigDecimal.valueOf(100.00));
 
     Funcionario funcionario3 = new Funcionario();
+    funcionario3.setCargo(cargoDevPleno);
     funcionario2.setSalario(BigDecimal.valueOf(2000.00));
     funcionario2.setAdicionalPersonalizado(BigDecimal.valueOf(100.00));
 
 
-    funcionarioList.add(funcionario1);
-    funcionarioList.add(funcionario2);
-    funcionarioList.add(funcionario3);
+    inputFuncionariosList.add(funcionario1);
+    inputFuncionariosList.add(funcionario2);
+    inputFuncionariosList.add(funcionario3);
+    mockList.add(funcionario1);
 
-    when(getSalarioTotalOfListFuncionariosUseCase.execute(funcionarioList))
-        .thenReturn(BigDecimal.valueOf(3200.00));
+    when(getSalarioTotalOfListFuncionariosUseCase.execute(mockList))
+        .thenReturn(BigDecimal.valueOf(1100.00));
 
     //then
-    BigDecimal result = target.getSalarioTotalPerCargo(funcionarioList, CargoBase.DEV_JUNIOR);
+    BigDecimal result = target.getSalarioTotalPerCargo(inputFuncionariosList, CargoBase.DEV_JUNIOR);
 
 
     //when
