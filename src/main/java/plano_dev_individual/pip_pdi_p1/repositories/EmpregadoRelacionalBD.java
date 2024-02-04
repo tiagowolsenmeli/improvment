@@ -6,8 +6,8 @@ import plano_dev_individual.pip_pdi_p1.entities.Funcionario;
 
 public interface EmpregadoRelacionalBD {
 
-  public Set<Funcionario> getFuncionariosAptosParaSalario();
+  Set<Funcionario> getFuncionariosAptosParaSalario();
 
-  public Map<String, Funcionario> getFuncionariosInaptosParaSalario();
+  Map<String, Funcionario> getFuncionariosInaptosParaSalario();
 
   }

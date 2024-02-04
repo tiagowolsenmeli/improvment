@@ -8,7 +8,6 @@ import plano_dev_individual.pip_pdi_p1.entities.charpessoas.conhecimento.Treinam
 @Service
 public class TreinamentosUseCase {
 
-
   @Autowired
   private Treinamento treinamento;
 

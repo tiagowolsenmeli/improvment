@@ -85,8 +85,10 @@ public class ListarFuncionariosParaPagamentoUseCaseTest {
     Set<Funcionario> empregadosAptos = new HashSet<>();
     Funcionario funcionario1 = new Funcionario();
     funcionario1.setCpf("12345678901");
+    funcionario1.setMatricula("1");
     Funcionario funcionario2 = new Funcionario();
     funcionario2.setCpf("12345678902");
+    funcionario2.setMatricula("2");
     empregadosAptos.add(funcionario1);
     empregadosAptos.add(funcionario1);
     empregadosAptos.add(funcionario1);

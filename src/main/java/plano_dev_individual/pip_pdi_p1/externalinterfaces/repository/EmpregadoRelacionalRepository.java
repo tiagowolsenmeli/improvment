@@ -35,7 +35,6 @@ public class EmpregadoRelacionalRepository implements EmpregadoRelacionalBD {
         funcionario5.setCpf("12345678905");
         funcionario5.setMatricula("1");
         funcionariosInaptos.put(funcionario5.getMatricula(), funcionario5);
-
     }
 
   @Override
@@ -44,7 +43,5 @@ public class EmpregadoRelacionalRepository implements EmpregadoRelacionalBD {
   }
 
   @Override
-  public Map<String, Funcionario> getFuncionariosInaptosParaSalario() {
-    return funcionariosInaptos;
-  }
+  public Map<String, Funcionario> getFuncionariosInaptosParaSalario() {return funcionariosInaptos;}
 }
