@@ -1,26 +1,25 @@
 package plano_dev_individual.pip2.usecases;
 
 import java.math.BigDecimal;
-import java.util.HashSet;
 import java.util.List;
-import java.util.Set;
+import java.util.function.Predicate;
 import org.springframework.stereotype.Service;
 import plano_dev_individual.pip2.entities.Funcionario;
 import plano_dev_individual.pip2.entities.enums.CargoBase;
-
+import plano_dev_individual.pip2.services.SalarioService;
 
 
 @Service
 public class GetSalarioTotalOfFuncionariosPerCargoUseCase {
 
-  GetSalarioTotalOfListFuncionariosUseCase getSalarioTotalOfListFuncionariosUseCase;
+  private SalarioService salarioService;
+  private GetSalarioTotalOfListFuncionariosUseCase getSalarioTotalOfListFuncionariosUseCase;
   public BigDecimal getSalarioTotalPerCargo(List<Funcionario> funcionarioList, CargoBase cargoBase) {
-    Set<Funcionario> funcionariosUnicos = new HashSet<>(funcionarioList);
+    return salarioService
+        .getSalarioTotalBrutoFiltered(funcionarioList, filterByCargoBase(cargoBase));
+  }
 
-    List<Funcionario> funcionariosList = funcionariosUnicos.stream()
-        .filter(funcionario -> funcionario.getCargo().getCargoBase().equals(cargoBase))
-        .toList();
-
-    return getSalarioTotalOfListFuncionariosUseCase.execute(funcionariosList);
+  private Predicate<Funcionario> filterByCargoBase(CargoBase cargoBase) {
+    return funcionario -> cargoBase.equals(funcionario.getCargo().getCargoBase());
   }
 }

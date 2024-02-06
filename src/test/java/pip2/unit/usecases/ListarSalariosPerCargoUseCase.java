@@ -13,6 +13,7 @@ import org.mockito.Mock;
 import plano_dev_individual.pip2.entities.Funcionario;
 import plano_dev_individual.pip2.entities.cargos.Cargo;
 import plano_dev_individual.pip2.entities.enums.CargoBase;
+import plano_dev_individual.pip2.services.SalarioService;
 import plano_dev_individual.pip2.usecases.GetSalarioTotalOfFuncionariosPerCargoUseCase;
 import plano_dev_individual.pip2.usecases.GetSalarioTotalOfListFuncionariosUseCase;
 
@@ -22,6 +23,9 @@ public class ListarSalariosPerCargoUseCase {
 
   @InjectMocks
   private GetSalarioTotalOfFuncionariosPerCargoUseCase target;
+
+  @Mock
+  private SalarioService salarioService;
 
 
   @Mock
