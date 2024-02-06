@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="pip2.unit.usecases.ListarSalariosPerCargoUseCase" tests="1" skipped="0" failures="1" errors="0" timestamp="2024-02-06T22:04:00" hostname="BR0C02FQ4E4MD6M" time="1.068">
+<testsuite name="pip2.unit.usecases.ListarSalariosPerCargoUseCase" tests="1" skipped="0" failures="1" errors="0" timestamp="2024-02-06T22:23:49" hostname="BR0C02FQ4E4MD6M" time="0.245">
   <properties/>
-  <testcase name="getFuncinariosAptosParaSalario()" classname="pip2.unit.usecases.ListarSalariosPerCargoUseCase" time="1.068">
+  <testcase name="getFuncinariosAptosParaSalario()" classname="pip2.unit.usecases.ListarSalariosPerCargoUseCase" time="0.245">
     <failure message="org.opentest4j.AssertionFailedError: expected: &lt;1100.0&gt; but was: &lt;null&gt;" type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError: expected: &lt;1100.0&gt; but was: &lt;null&gt;
 	at app//org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
 	at app//org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
