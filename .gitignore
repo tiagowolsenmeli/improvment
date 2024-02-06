@@ -119,6 +119,7 @@ fabric.properties
 *.class
 
 /build/
+build/
 
 
 # Log file
