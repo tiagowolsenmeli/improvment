@@ -1,10 +1,12 @@
 package pip2.unit.usecases;
 
+import static org.mockito.ArgumentMatchers.eq;
 import static org.mockito.Mockito.when;
 
 import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.function.Predicate;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -14,22 +16,17 @@ import plano_dev_individual.pip2.entities.Funcionario;
 import plano_dev_individual.pip2.entities.cargos.Cargo;
 import plano_dev_individual.pip2.entities.enums.CargoBase;
 import plano_dev_individual.pip2.services.SalarioService;
-import plano_dev_individual.pip2.usecases.GetSalarioTotalOfFuncionariosPerCargoUseCase;
-import plano_dev_individual.pip2.usecases.GetSalarioTotalOfListFuncionariosUseCase;
+import plano_dev_individual.pip2.usecases.GetSalarioTotalOfFuncionariosFilterByCargoBaseUseCase;
 
 @ExtendWith(org.mockito.junit.jupiter.MockitoExtension.class)
-public class ListarSalariosPerCargoUseCase {
+public class GetSalarioTotalOfFuncionariosFilterByCargoBaseUseCaseTest {
 
 
   @InjectMocks
-  private GetSalarioTotalOfFuncionariosPerCargoUseCase target;
+  private GetSalarioTotalOfFuncionariosFilterByCargoBaseUseCase target;
 
   @Mock
   private SalarioService salarioService;
-
-
-  @Mock
-  private GetSalarioTotalOfListFuncionariosUseCase getSalarioTotalOfListFuncionariosUseCase;
 
   @Test
   public void getFuncinariosAptosParaSalario(){
@@ -37,6 +34,9 @@ public class ListarSalariosPerCargoUseCase {
     BigDecimal expected = BigDecimal.valueOf(1100.00);
     List<Funcionario> inputFuncionariosList = new ArrayList<>();
     List<Funcionario> mockList = new ArrayList<>();
+    CargoBase cargoBase = CargoBase.DEV_JUNIOR;
+
+    Predicate<Funcionario> filterByCargoBase = funcionario -> cargoBase.equals(funcionario.getCargo().getCargoBase());
 
     Cargo cargo = new Cargo();
     cargo.setCargoBase(CargoBase.DEV_JUNIOR);
@@ -63,12 +63,11 @@ public class ListarSalariosPerCargoUseCase {
     inputFuncionariosList.add(funcionario3);
     mockList.add(funcionario1);
 
-    when(getSalarioTotalOfListFuncionariosUseCase.execute(mockList))
+    when(salarioService.getSalarioTotalBrutoFiltered(eq(mockList), eq(filterByCargoBase)))
         .thenReturn(BigDecimal.valueOf(1100.00));
 
     //then
     BigDecimal result = target.getSalarioTotalPerCargo(inputFuncionariosList, CargoBase.DEV_JUNIOR);
-
 
     //when
     Assertions.assertEquals(expected, result);

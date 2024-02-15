@@ -1,5 +1,8 @@
 package pip2.unit.usecases;
 
+import static org.mockito.ArgumentMatchers.eq;
+import static org.mockito.Mockito.when;
+
 import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
@@ -7,9 +10,11 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
+import org.mockito.Mock;
 import plano_dev_individual.pip2.entities.Funcionario;
 import plano_dev_individual.pip2.entities.cargos.Cargo;
 import plano_dev_individual.pip2.entities.enums.CargoBase;
+import plano_dev_individual.pip2.services.SalarioService;
 import plano_dev_individual.pip2.usecases.GetSalarioTotalOfListFuncionariosUseCase;
 
 
@@ -19,6 +24,9 @@ public class ListarSalariosEmpregadosUseCaseTest {
 
   @InjectMocks
   private GetSalarioTotalOfListFuncionariosUseCase target;
+
+  @Mock
+  private SalarioService salarioService;
 
 
 
@@ -40,6 +48,9 @@ public class ListarSalariosEmpregadosUseCaseTest {
     funcionarioList.add(funcionario1);
     funcionarioList.add(funcionario2);
     funcionarioList.add(funcionario2);
+
+    when(salarioService.getSalarioTotalBrutoFiltered(eq(funcionarioList), eq(funcionario -> true)))
+        .thenReturn(BigDecimal.valueOf(3200.00));
 
     BigDecimal result = target.execute(funcionarioList);
 
