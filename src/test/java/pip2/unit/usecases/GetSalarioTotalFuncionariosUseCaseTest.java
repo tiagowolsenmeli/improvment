@@ -5,9 +5,11 @@ import static org.mockito.Mockito.when;
 
 import java.math.BigDecimal;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.function.Predicate;
+import org.junit.Assert;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -32,12 +34,12 @@ public class GetSalarioTotalFuncionariosUseCaseTest {
   @Test
   public void getMapSalariosByCargoAll(){
     //given
-    BigDecimal expected = BigDecimal.valueOf(1100.00);
+    Map<String,BigDecimal> expected = Map.of(CargoBase.DEV_JUNIOR.name(), BigDecimal.valueOf(1100.00)
+    ,CargoBase.DEV_PLENO.name(), BigDecimal.valueOf(4200.0));
     List<Funcionario> inputFuncionariosList = new ArrayList<>();
     List<Funcionario> mockList = new ArrayList<>();
     CargoBase cargoBase = CargoBase.DEV_JUNIOR;
 
-    Predicate<Funcionario> filterByCargoBase = funcionario -> cargoBase.equals(funcionario.getCargo().getCargoBase());
 
     Cargo cargo = new Cargo();
     cargo.setCargoBase(CargoBase.DEV_JUNIOR);
@@ -55,8 +57,8 @@ public class GetSalarioTotalFuncionariosUseCaseTest {
 
     Funcionario funcionario3 = new Funcionario();
     funcionario3.setCargo(cargoDevPleno);
-    funcionario2.setSalario(BigDecimal.valueOf(2000.00));
-    funcionario2.setAdicionalPersonalizado(BigDecimal.valueOf(100.00));
+    funcionario3.setSalario(BigDecimal.valueOf(2000.00));
+    funcionario3.setAdicionalPersonalizado(BigDecimal.valueOf(100.00));
 
 
     inputFuncionariosList.add(funcionario1);

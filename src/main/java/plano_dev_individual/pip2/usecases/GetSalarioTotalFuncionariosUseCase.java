@@ -4,6 +4,7 @@ import java.math.BigDecimal;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.stream.Collectors;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 import plano_dev_individual.pip2.entities.Funcionario;
@@ -23,9 +24,10 @@ public class GetSalarioTotalFuncionariosUseCase {
     Map<String, BigDecimal> mapSalarios = new HashMap<>();
 
     funcionarioList.forEach(funcionario -> {
-      BigDecimal salarioAtual = mapSalarios.getOrDefault(funcionario.getCargo().getNome(), BigDecimal.ZERO);
-        mapSalarios.put(funcionario.getCargo().getNome(), salarioAtual.add(
-            BigDecimal.ZERO.max(funcionario.getSalarioBruto())));
+      BigDecimal salarioAtual =
+          mapSalarios.getOrDefault(funcionario.getCargo().getCargoBase().name(), BigDecimal.ZERO);
+      mapSalarios.put(funcionario.getCargo().getCargoBase().name(),
+          salarioAtual.add(BigDecimal.ZERO.max(funcionario.getSalarioBruto())));
     });
 
     return mapSalarios;
