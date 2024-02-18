@@ -10,10 +10,9 @@ import plano_dev_individual.pip2.services.SalarioService;
 
 
 @Service
-public class GetSalarioTotalOfFuncionariosPerCargoUseCase {
+public class GetSalarioTotalOfFuncionariosFilterByCargoBaseUseCase {
 
-  private SalarioService salarioService;
-  private GetSalarioTotalOfListFuncionariosUseCase getSalarioTotalOfListFuncionariosUseCase;
+  private  SalarioService salarioService;
   public BigDecimal getSalarioTotalPerCargo(List<Funcionario> funcionarioList, CargoBase cargoBase) {
     return salarioService
         .getSalarioTotalBrutoFiltered(funcionarioList, filterByCargoBase(cargoBase));

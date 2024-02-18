@@ -48,6 +48,9 @@ public class Funcionario extends PessoaFisica {
 //    }
 
     public BigDecimal getSalarioBruto() {
+        if (adicionalPersonalizado != null && salario != null){
         return salario.add(adicionalPersonalizado);
+    }
+    return BigDecimal.ZERO;
     }
 }
