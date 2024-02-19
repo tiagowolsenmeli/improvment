@@ -1,6 +1,5 @@
 rootProject.name = 'ContinuousImprovment'
-include 'entities'
-include 'domain'
 include 'infraestructure'
-include 'servicedomain'
+include 'domain'
+include 'application'
 
