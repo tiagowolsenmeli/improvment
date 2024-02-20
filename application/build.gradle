@@ -21,6 +21,7 @@ dependencies {
     implementation 'org.projectlombok:lombok:1.18.22'
     implementation project(':domain')
 
+
 }
 
 test {
