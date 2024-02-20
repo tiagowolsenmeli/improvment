@@ -36,21 +36,6 @@ public class Funcionario extends PessoaFisica {
     //Cargo - Entra uma lista
     //Formas diretas e funcionais
 
-//    public String getMatricula() {
-//        return matricula;
-//    }
-//
-//    public String setMatricula(String matricula) {
-//        return this.matricula = matricula;
-//    }
-//
-//    public void setSalario(BigDecimal salario) {
-//        this.salario = salario;
-//    }
-//
-//    public void setAdicionalPersonalizado(BigDecimal adicionalPersonalizado) {
-//        this.adicionalPersonalizado = adicionalPersonalizado;
-//    }
 
     public BigDecimal getSalarioBruto() {
         return salario.add(adicionalPersonalizado);
