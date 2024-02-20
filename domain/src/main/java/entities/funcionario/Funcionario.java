@@ -1,16 +1,11 @@
-package plano_dev_individual.pip_pdi_p1.entities;
+package entities.funcionario;
 
+import entities.cargos.Cargo;
+import entities.cargos.Funcao;
+import entities.pessoa.PessoaFisica;
 import java.math.BigDecimal;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
-import plano_dev_individual.pip_pdi_p1.entities.cargos.Cargo;
-import plano_dev_individual.pip_pdi_p1.entities.cargos.Funcao;
-import plano_dev_individual.pip_pdi_p1.entities.pessoa.PessoaFisica;
 
 @Data
 @EqualsAndHashCode(callSuper = true)
@@ -36,8 +31,10 @@ public class Funcionario extends PessoaFisica {
     //Cargo - Entra uma lista
     //Formas diretas e funcionais
 
-
     public BigDecimal getSalarioBruto() {
+        if (adicionalPersonalizado != null && salario != null){
         return salario.add(adicionalPersonalizado);
+    }
+    return BigDecimal.ZERO;
     }
 }

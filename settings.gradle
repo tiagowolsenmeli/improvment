@@ -1,2 +1,5 @@
 rootProject.name = 'ContinuousImprovment'
+include 'infraestructure'
+include 'domain'
+include 'application'
 
