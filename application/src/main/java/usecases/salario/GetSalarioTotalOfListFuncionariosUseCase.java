@@ -1,4 +1,4 @@
-package usecases;
+package usecases.salario;
 
 import entities.funcionario.Funcionario;
 import java.math.BigDecimal;

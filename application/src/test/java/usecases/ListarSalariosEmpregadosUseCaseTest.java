@@ -16,6 +16,7 @@ import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import services.SalarioService;
+import usecases.salario.GetSalarioTotalOfListFuncionariosUseCase;
 
 
 @ExtendWith(org.mockito.junit.jupiter.MockitoExtension.class)

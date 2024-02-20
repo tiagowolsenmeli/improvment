@@ -1,4 +1,4 @@
-package usecases;
+package usecases.salario;
 
 import entities.enums.CargoBase;
 import entities.funcionario.Funcionario;
