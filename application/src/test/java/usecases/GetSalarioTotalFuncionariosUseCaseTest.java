@@ -1,8 +1,8 @@
 package usecases;
 
-import entities.cargos.Cargo;
-import entities.enums.CargoBase;
-import entities.funcionario.Funcionario;
+import improvment.entities.cargos.Cargo;
+import improvment.entities.enums.CargoBase;
+import improvment.entities.funcionario.Funcionario;
 import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
@@ -12,7 +12,8 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
-import services.SalarioService;
+import improvment.services.SalarioService;
+import improvment.usecases.salario.GetSalarioTotalFuncionariosUseCase;
 
 @ExtendWith(org.mockito.junit.jupiter.MockitoExtension.class)
 public class GetSalarioTotalFuncionariosUseCaseTest {
@@ -60,7 +61,7 @@ public class GetSalarioTotalFuncionariosUseCaseTest {
     mockList.add(funcionario1);
 
     //then
-    Map result = target.execute(inputFuncionariosList);
+    Map<CargoBase, BigDecimal> result = target.execute(inputFuncionariosList);
 
     //when
     Assertions.assertEquals(expected, result);
