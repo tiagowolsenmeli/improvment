@@ -1,5 +1,7 @@
 package usecases;
 
+import static org.mockito.ArgumentMatchers.eq;
+
 import improvment.entities.cargos.Cargo;
 import improvment.entities.enums.CargoBase;
 import improvment.entities.funcionario.Funcionario;
@@ -29,8 +31,8 @@ public class GetSalarioTotalFuncionariosGroupByUseCaseTest {
   @Test
   public void getMapSalariosByCargoAll(){
     //given
-    Map<String,BigDecimal> expected = Map.of(CargoBase.DEV_JUNIOR.name(), BigDecimal.valueOf(1100.00)
-    ,CargoBase.DEV_PLENO.name(), BigDecimal.valueOf(4200.0));
+    Map<CargoBase,BigDecimal> expected = Map.of(CargoBase.DEV_JUNIOR, BigDecimal.valueOf(1100.00)
+    ,CargoBase.DEV_PLENO, BigDecimal.valueOf(4200.0));
     List<Funcionario> inputFuncionariosList = new ArrayList<>();
     List<Funcionario> mockList = new ArrayList<>();
     CargoBase cargoBase = CargoBase.DEV_JUNIOR;

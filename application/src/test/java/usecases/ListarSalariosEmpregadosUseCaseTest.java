@@ -50,7 +50,7 @@ public class ListarSalariosEmpregadosUseCaseTest {
     funcionarioList.add(funcionario2);
     funcionarioList.add(funcionario2);
 
-    when(salarioService.getSalarioTotalBrutoFiltered(eq(funcionarioList), eq(funcionario -> true)))
+    when(salarioService.getSalarioTotalBrutoOfList(funcionarioList))
         .thenReturn(BigDecimal.valueOf(3200.00));
 
     BigDecimal result = target.execute(funcionarioList);
