@@ -37,4 +37,19 @@ public class SalarioController {
     }
 
   }
+
+  @GetMapping("/salario/all/h2")
+  public Map<CargoBase, BigDecimal> returnAllSalariosH2( ){
+    List<Funcionario> funcionarioList;
+    try {
+      funcionarioList = getFuncionarioRepository.getFuncionariosH2();
+      if (funcionarioList == null || funcionarioList.isEmpty()) {
+        throw new ConectTimeOutException("Erro ao buscar funcionários");
+      }
+      return getSalarioTotalFuncionariosUseCase.execute(funcionarioList);
+    } catch (ConectTimeOutException e) {
+      throw new RuntimeException(e);
+    }
+
+  }
 }

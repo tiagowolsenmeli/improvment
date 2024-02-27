@@ -39,4 +39,9 @@ public class FuncionariosRepository implements GetFuncionarioRepository{
   public List<Funcionario> getFuncionarios() {
      return funcionarioList;
   }
+
+  @Override
+  public List<Funcionario> getFuncionariosH2() {
+    return funcionarioList;
+  }
 }

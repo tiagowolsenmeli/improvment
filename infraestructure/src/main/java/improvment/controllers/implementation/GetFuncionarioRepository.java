@@ -6,4 +6,6 @@ import java.util.List;
 public interface GetFuncionarioRepository {
 
   List<Funcionario> getFuncionarios();
+
+  List<Funcionario> getFuncionariosH2();
 }
