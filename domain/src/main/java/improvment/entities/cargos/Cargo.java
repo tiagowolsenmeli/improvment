@@ -6,15 +6,21 @@ import lombok.Data;
 
 @Data
 public class Cargo {
+  private Long id;
 
-    private BigDecimal salario;
+  private BigDecimal salario;
 
     private CargoBase cargoBase;
     private String nome;
     private CBO cbo;
     private boolean vinculoAtivo;
 
-    public Cargo(final BigDecimal salario, final String nome, final CBO cbo, final boolean vinculoAtivo,
+
+  public void setId(Long id) {
+    this.id = id;
+  }
+
+  public Cargo(final BigDecimal salario, final String nome, final CBO cbo, final boolean vinculoAtivo,
                  final CargoBase cargoBase) {
         this.salario = salario;
         this.nome = nome;

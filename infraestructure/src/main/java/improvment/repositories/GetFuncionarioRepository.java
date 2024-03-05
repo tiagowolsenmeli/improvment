@@ -1,4 +1,4 @@
-package improvment.controllers.implementation;
+package improvment.repositories;
 
 import improvment.entities.funcionario.Funcionario;
 import java.util.List;

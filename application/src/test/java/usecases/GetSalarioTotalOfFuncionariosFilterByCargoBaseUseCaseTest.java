@@ -64,13 +64,13 @@ public class GetSalarioTotalOfFuncionariosFilterByCargoBaseUseCaseTest {
     inputFuncionariosList.add(funcionario3);
     mockList.add(funcionario1);
 
-    when(salarioService.getSalarioTotalBrutoFiltered(mockList, any()))
+    when(salarioService.getSalarioTotalBrutoFiltered(any(), any()))
         .thenReturn(BigDecimal.valueOf(1100.00));
 
     //then
     BigDecimal result = target.getSalarioTotalPerCargo(inputFuncionariosList, CargoBase.DEV_JUNIOR);
 
     //when
-    Assertions.assertEquals(eq(expected), eq(result));
+    Assertions.assertEquals(expected, result);
   }
 }
