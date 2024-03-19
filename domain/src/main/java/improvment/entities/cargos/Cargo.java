@@ -1,17 +1,26 @@
 package improvment.entities.cargos;
 
 import improvment.entities.enums.CargoBase;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
 import java.math.BigDecimal;
 import lombok.Data;
 
 @Data
+@Entity
 public class Cargo {
+  @Id
   private Long id;
 
   private BigDecimal salario;
 
     private CargoBase cargoBase;
     private String nome;
+
+    @ManyToOne
+    @JoinColumn(name = "cbo_ID", referencedColumnName = "id")
     private CBO cbo;
     private boolean vinculoAtivo;
 

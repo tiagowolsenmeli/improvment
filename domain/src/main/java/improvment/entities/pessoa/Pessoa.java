@@ -1,6 +1,11 @@
 package improvment.entities.pessoa;
 
+import jakarta.persistence.Id;
+import jakarta.persistence.MappedSuperclass;
+
+@MappedSuperclass
 public abstract class Pessoa {
+  @Id
   private long id;
 
   public long getId() {

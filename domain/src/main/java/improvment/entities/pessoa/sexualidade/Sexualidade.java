@@ -2,8 +2,20 @@ package improvment.entities.pessoa.sexualidade;
 
 import improvment.entities.enums.OrientacaoSexual;
 import improvment.entities.enums.SexoBiologico;
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import lombok.Data;
 
+@Entity
+@Data
 public class Sexualidade {
+  @Id
+  @GeneratedValue(strategy = GenerationType.SEQUENCE)
+  @Column(name = "id", nullable = false)
+  private Long id;
 
   private SexoBiologico sexoBiologico;
 
