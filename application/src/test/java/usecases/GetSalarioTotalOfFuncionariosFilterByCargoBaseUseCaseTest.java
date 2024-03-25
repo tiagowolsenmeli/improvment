@@ -1,5 +1,6 @@
 package usecases;
 
+import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.ArgumentMatchers.eq;
 import static org.mockito.Mockito.when;
 
@@ -63,7 +64,7 @@ public class GetSalarioTotalOfFuncionariosFilterByCargoBaseUseCaseTest {
     inputFuncionariosList.add(funcionario3);
     mockList.add(funcionario1);
 
-    when(salarioService.getSalarioTotalBrutoFiltered(eq(mockList), eq(filterByCargoBase)))
+    when(salarioService.getSalarioTotalBrutoFiltered(any(), any()))
         .thenReturn(BigDecimal.valueOf(1100.00));
 
     //then

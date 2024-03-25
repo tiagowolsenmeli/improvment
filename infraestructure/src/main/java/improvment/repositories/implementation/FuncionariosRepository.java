@@ -1,15 +1,16 @@
-package improvment.controllers.implementation;
+package improvment.repositories.implementation;
 
 import improvment.entities.cargos.Cargo;
 import improvment.entities.enums.CargoBase;
 import improvment.entities.funcionario.Funcionario;
+import improvment.repositories.GetFuncionarioRepository;
 import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public class FuncionariosRepository implements GetFuncionarioRepository{
+public class FuncionariosRepository implements GetFuncionarioRepository {
 
   private List<Funcionario> funcionarioList =  new ArrayList<>();
 
@@ -38,5 +39,10 @@ public class FuncionariosRepository implements GetFuncionarioRepository{
   @Override
   public List<Funcionario> getFuncionarios() {
      return funcionarioList;
+  }
+
+  @Override
+  public List<Funcionario> getFuncionariosH2() {
+    return funcionarioList;
   }
 }

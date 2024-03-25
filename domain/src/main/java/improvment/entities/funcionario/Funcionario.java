@@ -3,16 +3,22 @@ package improvment.entities.funcionario;
 import improvment.entities.cargos.Cargo;
 import improvment.entities.cargos.Funcao;
 import improvment.entities.pessoa.PessoaFisica;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Inheritance;
+import jakarta.persistence.ManyToOne;
 import java.math.BigDecimal;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 
 @Data
 @EqualsAndHashCode(callSuper = true)
+@Entity
 public class Funcionario extends PessoaFisica {
 
+    @ManyToOne
     private Cargo cargo;
 
+    @ManyToOne
     private Funcao funcao;
     private String matricula;
 

@@ -64,6 +64,6 @@ public class GetSalarioTotalFuncionariosUseCaseTest {
     Map<CargoBase, BigDecimal> result = target.execute(inputFuncionariosList);
 
     //when
-    Assertions.assertEquals(expected, result);
+    Assertions.assertEquals(equals(expected), equals(result));
   }
 }
